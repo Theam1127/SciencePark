@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SciencePark</string>
+    <string name="selectRestaurant">Select Restaurant:</string>
+    <string name="availableFood">Available Food</string>
+    <string name="confirmOrder">Confirm Order</string>
+    <string name="myOrders">My Orders</string>
 </resources>
