@@ -20,6 +20,7 @@
         <activity android:name=".FoodDetail" />
         <activity android:name=".OrderStatus"></activity>
         <activity android:name=".RestaurantList" />
+        <activity android:name=".MainMenu"/>
     </application>
 
 
