@@ -15,7 +15,7 @@ public class OrderStatus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_status);
         List<String> myOrders = new ArrayList<String>();
-        Item item = new Item("Al-Fariz Mamak","Nasi Lemak", "Science Park 1", 5.00);
+        Item item = new Item("Al-Fariz Mamak","Nasi Lemak", "Science Park 1", 3, 15.00);
         myOrders.add(item.toString());
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,myOrders);
         ListView orderList = (ListView)findViewById(R.id.listViewMyOrders);

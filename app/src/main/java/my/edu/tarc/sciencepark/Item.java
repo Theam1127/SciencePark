@@ -8,15 +8,15 @@ public class Item {
     String restaurant;
     String foodName;
     String venue;
+    int quantity;
     double price;
-    boolean status;
 
-    public Item(String restaurant, String foodName, String venue, double price){
+    public Item(String restaurant, String foodName, String venue, int quantity, double price){
         this.restaurant = restaurant;
         this.foodName=foodName;
         this.venue=venue;
+        this.quantity = quantity;
         this.price=price;
-        status = false;
     }
     public String getFoodName() {
         return foodName;
@@ -44,6 +44,6 @@ public class Item {
 
     @Override
     public String toString(){
-               return String.format("Restaurant: %s\nFood: %s\nDelivery Location: %s\nStatus: %s",restaurant,foodName, venue, (status==true?"Order Accepted":"Pending"));
+               return String.format("Restaurant: %s\nFood: %s\nDelivery Location: %s\nTotal: RM %.2f\nStatus: %s",restaurant,foodName, venue, price*quantity,"Your food is on the way!");
     }
 }

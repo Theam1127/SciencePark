@@ -16,7 +16,6 @@ public class FoodList extends AppCompatActivity {
         setContentView(R.layout.activity_food_list);
         final String[] foodList = {"Nasi Lemak", "Mee Goreng", "Roti Canai", "Lamb Chop", "Fish & Chips", "Prawn Mee", "Char Kuey Teow"};
         double[] prices = {5.00,6.00,6.50,5.50,4.50,5.50,8.00};
-        String orderMe = "Order Now!";
         Intent intent = getIntent();
         final String restaurant = intent.getStringExtra("SelectedRestaurant");
         int count=0;
@@ -31,7 +30,9 @@ public class FoodList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(FoodList.this,FoodDetail.class);
-                intent.putExtra("SelectedFood",foodList[position]);
+                String[] temp = foodList[position].split("RM");
+                String food = temp[0];
+                intent.putExtra("SelectedFood",food);
                 intent.putExtra("FoodPosition",position);
                 intent.putExtra("SelectedRestaurant",restaurant);
                 startActivity(intent);

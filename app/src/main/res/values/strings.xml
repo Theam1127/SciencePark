@@ -9,4 +9,7 @@
     <string name="help">Help</string>
     <string name="setting">Setting</string>
     <string name="logout">Logout</string>
+    <string name="Minus">-</string>
+    <string name="add">+</string>
+
 </resources>
