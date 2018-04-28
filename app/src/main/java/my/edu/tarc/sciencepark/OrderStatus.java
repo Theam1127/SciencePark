@@ -2,6 +2,8 @@ package my.edu.tarc.sciencepark;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -20,5 +22,11 @@ public class OrderStatus extends AppCompatActivity {
         ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,myOrders);
         ListView orderList = (ListView)findViewById(R.id.listViewMyOrders);
         orderList.setAdapter(adapter);
+        orderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
     }
 }

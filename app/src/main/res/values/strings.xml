@@ -5,7 +5,7 @@
     <string name="confirmOrder">Confirm Order</string>
     <string name="myOrders">My Orders</string>
     <string name="orderfood">Order Food</string>
-    <string name="orderstatus">Order Status</string>
+    <string name="orderstatus">My Orders</string>
     <string name="help">Help</string>
     <string name="setting">Setting</string>
     <string name="logout">Logout</string>
