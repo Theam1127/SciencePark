@@ -4,4 +4,6 @@
     <string name="availableFood">Available Food</string>
     <string name="confirmOrder">Confirm Order</string>
     <string name="myOrders">My Orders</string>
+    <string name="orderfood">Order Food</string>
+    <string name="orderstatus">Order Status</string>
 </resources>
