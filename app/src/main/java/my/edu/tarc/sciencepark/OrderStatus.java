@@ -1,5 +1,6 @@
 package my.edu.tarc.sciencepark;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,8 @@ public class OrderStatus extends AppCompatActivity {
         orderList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(OrderStatus.this,mapActivity.class);
+                startActivity(intent);
 
             }
         });

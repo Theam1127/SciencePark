@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="my.edu.tarc.sciencepark">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.    READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -9,6 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyByuMxTHY5SkpRCC9jyJNoI92GAl2galqs" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +31,10 @@
         </activity>
         <activity android:name=".FoodList" />
         <activity android:name=".FoodDetail" />
-        <activity android:name=".OrderStatus"></activity>
+        <activity android:name=".OrderStatus" />
         <activity android:name=".RestaurantList" />
-        <activity android:name=".MainMenu"/>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".mapActivity"></activity>
     </application>
-
 
 </manifest>
