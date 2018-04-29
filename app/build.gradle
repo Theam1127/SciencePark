@@ -26,7 +26,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
     compile 'com.android.support:multidex:1.0.1'
-    implementation files('libs/lib-api-java.jar')
+    api files('libs/lib-api-java.jar')
     implementation 'com.google.android.gms:play-services-maps:15.0.0'
-
 }

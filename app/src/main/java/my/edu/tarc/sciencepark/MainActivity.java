@@ -7,14 +7,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+import android.util.Base64;
 import com.twizo.TwizoFactory;
 import com.twizo.Twizo;
+import com.twizo.controllers.sms.SmsController;
 import com.twizo.controllers.verification.VerificationController;
 import com.twizo.dataaccess.Node;
 import com.twizo.dataaccess.jsonparams.VerificationParams;
 import com.twizo.exceptions.TwizoException;
 import com.twizo.models.Verification;
+
 
 import java.io.IOException;
 
@@ -61,6 +63,16 @@ public class MainActivity extends AppCompatActivity {
 
                 username = usernameet.getText().toString();
                 password = passwordet.getText().toString();
+                Twizo twizo = null;
+                try {
+                    twizo = new TwizoFactory("Ae8GX676HfYXT9MxkEhWM5vsa1ZjzwX3yIi88e7B_eqsNqLm", Node.ASIA);
+                    SmsController smsController = twizo.getSmsController();
+
+// parameters = recipient phone number - message - sender phone number
+                    smsController.sendSimple("601111776471", "Hello I m chun i", "60987654321");
+                } catch (TwizoException e) {
+                    e.printStackTrace();
+                }
 
                 Intent mainmenu = new Intent(getApplicationContext(), MainMenu.class);
                 startActivity(mainmenu);
