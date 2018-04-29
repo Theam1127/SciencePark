@@ -26,9 +26,12 @@ public class RestaurantList extends AppCompatActivity {
         String[] Rlistsp1 = {"Al-Fariz Mamak", "KFC Restaurant", "Mc Donald", "Bistro 1980", "BBQ Plaza","llao llao"};
         String[] Rlistsp2 = {"ZhapFan88", "Burger King", "Morganfield", "Tealive"};
         for(String restaurant : Rlistsp1){
+            restaurant+=" @ Science Park 1";
             restaurantList.add(restaurant);
+
         }
         for(String r : Rlistsp2){
+            r+=" @ Science Park 2";
             restaurantList.add(r);
         }
         final ArrayAdapter<String> restaurantAdapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_dropdown_item_1line,restaurantList);
